@@ -1,21 +1,26 @@
-// src/components/ProtectedRoute.tsx
-import React from "react";
-import { Navigate, RouteProps } from "react-router-dom";
+// Packages:
+import React from 'react'
+import { Navigate } from 'react-router-dom'
 
+// Typescript:
 interface ProtectedRouteProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
+// Functions:
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
-  const token = localStorage.getItem("token");
+  // Constants:
+  const token = localStorage.getItem('token')
 
   if (!token) {
     // Redirect to login if there is no token
-    return <Navigate to="/" />;
+    return <Navigate to='/' />
   }
 
   // If there is a token, render the children components
-  return <>{children}</>;
-};
+  // Return:
+  return <>{children}</>
+}
 
-export default ProtectedRoute;
+// Exports:
+export default ProtectedRoute

@@ -1,20 +1,28 @@
-import Navbar from "@/components/Navbar";
-import { useRef } from "react";
-import { Dropzone } from "@/components/Dropzone";
-import { Button } from "@/components/ui/button";
+// Packages:
+import { useRef } from 'react'
+
+// Components:
+import Navbar from '@/components/Navbar'
+import { Button } from '@/components/ui/button'
+
+// Functions:
 const Scheck = () => {
-  const inputRef = useRef<HTMLInputElement>(null);
+  // Ref:
+  const inputRef = useRef<HTMLInputElement>(null)
 
+  // Functions:
   const handleClickUpload = () => {
-    inputRef.current?.click();
-  };
+    inputRef.current?.click()
+  }
 
+  // Return:
   return (
     <>
       <Navbar />
-      <div className="w-screen h-screen dark:bg-[#18181b] flex flex-col justify-center items-center"></div>
+      <div className='w-screen h-screen dark:bg-[#18181b] flex flex-col justify-center items-center'></div>
     </>
-  );
-};
+  )
+}
 
-export default Scheck;
+// Exports:
+export default Scheck
